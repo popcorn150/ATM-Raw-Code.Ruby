@@ -2,7 +2,7 @@ def menu (first_name)
   puts "-" * 5
   puts "Menu"
   puts "-" * 5
-  puts "Hi #{first_name}, what would you like to do today"
+  puts "Hi #{$first_name}, what would you like to do today"
 
   puts "(D) - Account-Deposit"
   puts "(S) - Send Money"
@@ -30,6 +30,8 @@ def menu (first_name)
   when "L"
     log_out
   else
-    puts "Invalid option"
-  end  
+    puts "Invalid option, check your options and try again!!"
+  end 
+  menu("dave") 
+  option = gets.chomp.upcase
 end

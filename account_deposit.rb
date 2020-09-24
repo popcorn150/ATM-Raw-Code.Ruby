@@ -6,7 +6,7 @@ def account_deposit
   puts "Enter a deposit amount"
   deposit_amount = gets.chomp.to_i
 
-  balance = 0 + deposit_amount
-  puts "$#{deposit_amount} was successfully deposited. You current account balance is now $#{balance}."
+  $balance = 0 + deposit_amount
+  puts "$#{deposit_amount} was successfully deposited. You current account balance is now $#{$balance}."
   menu("dave")
 end

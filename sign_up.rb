@@ -7,7 +7,7 @@ def sign_up
   puts "-" * 3
 
   puts "First Name"
-  first_name = gets.chomp
+  $first_name = gets.chomp
 
   puts "Last Name"
   last_name = gets.chomp
@@ -25,14 +25,20 @@ def sign_up
   house_address = gets.chomp
 
   puts "Choose a Password"
-  password = gets.chomp
+  $first_password = gets.chomp
 
   puts "Confirm Password"
   confirm_password = gets.chomp
+  while confirm_password != $first_password
+    puts "Sorry incorrect password! Try again.."
+    confirm_password = gets.chomp
+  end
 
   puts "-" * 23
   puts "Registration Successful"
   puts "-" * 23
 
-  puts "Welcome #{first_name} #{last_name}, your account has been created successfully."
+  puts "Welcome #{$first_name} #{last_name}, your account has been created successfully."
+
+  return $first_name
 end

@@ -1,10 +1,10 @@
-require_relative "screen1.rb"
-require_relative "screen2.rb"
-require_relative "screen3.rb"
-require_relative "screen4.rb"
+require_relative "account_deposit.rb"
+require_relative "introduction.rb"
+require_relative "menu.rb"
+require_relative "send_money.rb"
 require_relative "sign_in.rb"
 require_relative "sign_up.rb"
-require_relative "menu.rb"
+require_relative "withdrawal.rb"
 
 
 goal = introduction
@@ -16,5 +16,4 @@ elsif goal == "I"
 else
   puts "Invalid options, please check your options and try again!!"
 end
-
-
+goal = introduction
